@@ -2,9 +2,10 @@
   "name": "graphql-prj",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "author": "Manoja D",
   "license": "ISC",

@@ -1,0 +1,69 @@
+# Welcome to Ruru, our distribution of GraphiQL and related tooling to
+# inspect your GraphQL API.
+#
+# GraphiQL is an in-browser tool for writing, validating, and
+# testing GraphQL queries.
+#
+# Type queries into this side of the screen, and you will see intelligent
+# typeaheads aware of the current GraphQL type schema and live syntax and
+# validation errors highlighted within the text.
+#
+# GraphQL queries typically start with a "{" character. Lines that starts
+# with a # are ignored.
+#
+# An example GraphQL query might look like:
+#
+#     {
+#       field(arg: "value") {
+#         subField
+#       }
+#     }
+#
+# Keyboard shortcuts:
+#
+#  Prettify Query:  Shift-Ctrl-P (or press the prettify button above)
+#
+#     Merge Query:  Shift-Ctrl-M (or press the merge button above)
+#
+#       Run Query:  Ctrl-Enter (or press the play button above)
+#
+#   Auto Complete:  Ctrl-Space (or just start typing)
+#
+query MyQuery {
+  quoteOfTheDay
+  tryMyObject {
+    someName
+    someDay
+  }
+  getDie(numSides: 8) {
+    numSides
+    rollOnce
+    roll(numRolls: 2)
+  }
+  tryMyList
+  ...myFrag
+}
+
+query MyQuery2($myNumber: Int) {
+  getDie(numSides: $myNumber) {
+    numSides
+    rollOnce
+    roll(numRolls: 2)
+  }
+  tryMyList
+}
+
+query MyQuery3 {
+  getRandNumber(testNo: { testNo1: 2, testNo2: 3 }) {
+    testNumber
+    testFun
+  }
+}
+
+fragment myFrag on Query {
+  random
+  rollThreeDice(numDice: 2, numSides: 10)
+}
+
+# variable { "myNumber": 8}
+# Headers {"Accept-Encoding": "gzip"}

@@ -1,0 +1,22 @@
+{
+  hello1
+  hello
+  __schema {
+    description
+  }
+  __typename
+  __type(name: "Query") {
+    name
+    description
+    specifiedByURL
+    kind
+    fields {
+      name
+      type {
+        name
+        description
+        specifiedByURL
+      }
+    }
+  }
+}
