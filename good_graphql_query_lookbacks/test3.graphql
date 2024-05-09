@@ -1,0 +1,14 @@
+#
+query some {
+  user(id: "a") {
+    name
+    testFun
+    testFriend {
+      friend
+      newFriend {
+        friendName
+        __typename
+      }
+    }
+  }
+}
